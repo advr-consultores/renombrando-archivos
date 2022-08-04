@@ -1,0 +1,22 @@
+:root {
+    --primario: #14C444;
+    --primarioOscuro: #0E9131;
+    --secundario: #0E8DA1;
+    --secundarioOscuro: #0A7181;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: 'Inconsolata', monospace;
+}
+
+/* Globales */
+html { font-size: 62.5%; box-sizing: border-box;}
+/* Hack para box model **/
+*, *:before, *:after { box-sizing: inherit;}
+body {
+    font-size: 1.6rem;
+    /* 1rem = 10px */
+    font-family: 'Inconsolata', sans-serif;
+    line-height: 1.5;
+}
+h1,h2,h3 { text-transform: uppercase; }
