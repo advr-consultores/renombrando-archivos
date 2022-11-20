@@ -1,0 +1,151 @@
+:root {
+    --primario: #14C444;
+    --primarioOscuro: #0E9131;
+    --secundario: #0E8DA1;
+    --secundarioOscuro: #0A7181;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: 'Inconsolata', monospace;
+}
+
+/* Globales */
+html { font-size: 62.5%; box-sizing: border-box;}
+/* Hack para box model **/
+*, *:before, *:after { box-sizing: inherit;}
+body {
+    font-size: 1.6rem;
+    /* 1rem = 10px */
+    font-family: 'Inconsolata', sans-serif;
+    line-height: 1.5;
+    font-weight: 700;
+}
+h1,h2,h3 { text-transform: uppercase; }
+option { font-weight: 700; }
+
+/* Disable */
+.disable{
+    pointer-events: none;
+    color:#AAA;
+    background-color:#F5F5F5;
+}
+
+/* Contenedor */
+.contenedor{
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 80rem;
+    font-size: 2rem;
+}
+
+.titulo{ font-size: 3rem; }
+@media (min-width: 768px){ .titulo{ font-size: 4rem; } }
+
+/* Archivos */
+.archivos{
+    margin: 0 2rem;
+    padding: 0.5rem;
+    position: relative;
+    border: 0.2rem dotted var(--secundarioOscuro);
+    border-radius: 3rem;
+}
+@media (min-width: 768px){ .archivos{ border-radius: 0; } }
+@media (min-width: 1280px){ .archivos{ margin: 0; } }
+.archivos--seleccionado{
+    color: white;
+    background-color: var(--secundario);
+    border: 0.2rem solid var(--secundarioOscuro);
+}
+.archivos input{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.archivos p{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Formulario */
+.formulario{
+    margin: 0 2rem;
+    padding: 1rem;
+    border: 0.1rem solid var(--secundarioOscuro);
+}
+@media (min-width: 768px){
+    .formulario{
+        border: 0.5rem solid var(--secundarioOscuro);
+        border-radius: 2rem;
+    }
+}
+@media (min-width: 1280px){ .formulario{ margin: 0; } }
+
+/* Campo */
+.campo{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto 1rem auto;
+}
+@media (min-width: 768px){
+    .campo{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+}
+.campo_titulo{}
+.campo_seleccion{ 
+    width: 80%;
+    justify-self: center;
+    display: flex; 
+    justify-content: space-evenly;  }
+@media (min-width: 768px){ .campo_seleccion{ 
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly; 
+    } 
+}
+.campo_seleccion label{ margin-left: 0.5rem; }
+
+/* Manual */
+.manual_titulo{ font-weight: 200; }
+.manual_texto{ margin: 0; }
+
+.manual input{ width: 80%; margin: 1rem auto;}
+@media (min-width: 768px){ .manual input{ width: 60%; } }
+.manual_editar{
+    cursor: pointer;
+    width: 80%;
+    color: var(--negro);
+    background-color: var(--blanco);
+    border: 0.1rem dashed var(--negro);
+    border-radius: 1rem;
+    display: block;
+    margin: 2rem auto;
+}
+@media (min-width: 768px){ .manual_editar{ width: 20%; } }
+.manual_descargar{ 
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 80%;
+    color: var(--blanco);
+    background-color: var(--primario);
+    border: 0.5 solid var(--primarioOscuro);
+    border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
+}
+@media (min-width: 768px){ .manual_descargar{ width: 20%; } }
+.manual_input{
+    width: 80%;
+    margin: 0 auto 2rem auto;
+}
+@media (min-width: 768px){ .manual_input{ width: 20%; } }
